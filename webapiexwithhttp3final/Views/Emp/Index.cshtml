@@ -1,0 +1,26 @@
+﻿@model webapiexwithhttp3final.Models.Employee
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table>
+    <tr>
+        <th>Eid</th>
+        <th>EName</th>
+        <th>Esal</th>
+        <th>Age</th>
+        <th>Position</th>
+    </tr>
+    @foreach (var item in  TempData["li"] as IEnumerable<webapiexwithhttp3final.Models.Employee>)
+    {
+        <tr>
+            <td>@item.eid</td>
+            <td>@item.ename</td>
+            <td>@item.esal</td>
+            <td>@item.age</td>
+            <td>@item.position</td>
+        </tr>
+    }
+</table>
